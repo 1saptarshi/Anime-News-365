@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime News</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="p-5 bg-gray-800 flex justify-between items-center">
+        <h1 class="text-3xl font-bold">Anime News</h1>
+        <div>
+            <input id="search-input" type="text" placeholder="Search..." class="p-2 rounded bg-gray-700 text-white">
+            <button id="search-button" class="p-2 rounded bg-blue-500 text-white"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <nav class="p-5 bg-gray-800">
+        <button class="category-btn p-2 m-2 bg-blue-500 rounded" data-category="top">Top Anime</button>
+        <button class="category-btn p-2 m-2 bg-blue-500 rounded" data-category="upcoming">Upcoming Anime</button>
+        <button class="category-btn p-2 m-2 bg-blue-500 rounded" data-category="news">News</button>
+    </nav>
+    <main class="p-5">
+        <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        <div id="pagination" class="flex justify-center mt-5">
+            <button id="prev-page" class="p-2 m-2 bg-blue-500 rounded"><i class="fas fa-arrow-left"></i> Previous</button>
+            <button id="next-page" class="p-2 m-2 bg-blue-500 rounded">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div id="loading" class="flex justify-center items-center mt-5 hidden">
+            <i class="fas fa-spinner fa-spin text-4xl"></i>
+        </div>
+    </main>
+    <footer class="p-5 bg-gray-800 text-center">
+        <p>Anime News © 2024. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
